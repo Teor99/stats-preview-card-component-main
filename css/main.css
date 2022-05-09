@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  background-color: #0a0c1a;
+}
+
+.stats-card,
+.stats-card * {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.stats-card {
+  max-width: 1180px;
+  max-height: 446px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
+  margin: 3%;
+  overflow: hidden;
+  border-radius: 10px;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.stats-card__info {
+  padding: 6.5% 6% 6% 6.5%;
+  background-color: #1b1938;
+}
+
+.stats-card__img {
+  width: 100%;
+  height: 100%;
+}
+
+.stats-card__title {
+  font-size: 240%;
+  font-family: "Inter", sans-serif;
+  color: white;
+}
+
+.stats-card__accent {
+  color: #ab5add;
+}
+
+.stats-card__text {
+  margin: 1.6em 0 5em 0;
+  color: #b5b3cc;
+  font-weight: 400;
+  line-height: 1.65em;
+  width: 90%;
+}
+
+.stats-card__stats-list {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.stats-card__stat {
+  width: 33%;
+}
+
+.stats-card__stat-value {
+  color: white;
+  margin-bottom: 0.2em;
+}
+
+.stats-card__stat-name {
+  font-size: 0.92em;
+  color: #b5b3cc;
+  text-transform: uppercase;
+  font-weight: 400;
+}
