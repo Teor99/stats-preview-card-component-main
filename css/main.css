@@ -43,21 +43,28 @@ body {
   background-color: #1b1938;
 }
 
-.stats-card__img-filter {
-  background: -webkit-gradient(linear, left top, left bottom, from(#6a328dba)), url("../images/image-header-desktop.jpg");
-  background: linear-gradient(#6a328dba), url("../images/image-header-desktop.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  -webkit-filter: contrast(160%);
-          filter: contrast(160%);
-  height: 100%;
+.stats-card__img-container {
+  position: relative;
+}
+
+.stats-card__img {
   width: 37.5vw;
 }
 
 @media screen and (min-width: 1440px) {
-  .stats-card__img-filter {
+  .stats-card__img {
     width: 540px;
   }
+}
+
+.stats-card__img-filter {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#54008891));
+  background: linear-gradient(#54008891);
 }
 
 .stats-card__title {

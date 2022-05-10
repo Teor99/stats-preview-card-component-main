@@ -9,6 +9,7 @@ $title-text-color: white;
 $body-bg-color: hsl(233, 46%, 7%);
 $main-text-color: hsl(245, 20%, 75%);
 $accent-text-color: hsl(277, 66%, 61%);
+$img-filter-color: #54008891;
 
 $bp-1440: 1440px;
 
@@ -44,17 +45,35 @@ body {
     background-color: hsl(244, 38%, 16%);
   }
 
-  &__img-filter {
-    background: linear-gradient(#6a328dba), url("../images/image-header-desktop.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    filter: contrast(160%);
-    height: 100%;
+  &__img-container {
+    position: relative;
+  }
 
+  &__img {
+    // background: linear-gradient(#6a328dba), url("../images/image-header-desktop.jpg");
+    // background-size: cover;
+    // background-repeat: no-repeat;
+    // filter: contrast(150%);
+    // height: 100%;
+
+    // width: 37.5vw;
     width: 37.5vw;
     @media screen and (min-width: $bp-1440) {
       width: 540px;
     }
+
+    // background-color: #6a328dba;
+    // background: linear-gradient(#6a328dba);
+    // opacity: 50%;
+  }
+
+  &__img-filter {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient($img-filter-color);
   }
 
   &__title {
