@@ -7,9 +7,10 @@ $font-weight-regular: 400;
 $font-weight-bold: 700;
 $title-text-color: white;
 $body-bg-color: hsl(233, 46%, 7%);
-$main-text-color: hsl(245, 20%, 75%);
+$main-text-color: hsl(240, 15%, 68%);
 $accent-text-color: hsl(277, 66%, 61%);
-$img-filter-color: #54008891;
+$img-filter-color: #6a328dba;
+$img-filter-contrast: 140%;
 
 $max-desktop-width: 1440px;
 $max-mobile-width: 480px;
@@ -38,33 +39,59 @@ body {
   font-size: $font-size;
   font-weight: $font-weight-regular;
 
-  width: 77vw;
-  height: 31vw;
+  @media screen and (max-width: $max-mobile-width) {
+    width: 327px;
+    height: 780px;
+    flex-direction: column;
+  }
+  @media screen and (min-width: calc(#{$max-mobile-width} + 1px)) and (max-width: calc(#{$max-desktop-width} - 1px)) {
+    width: 77vw;
+    height: 31vw;
+  }
   @media screen and (min-width: $max-desktop-width) {
     width: 1110px;
     height: 446px;
   }
 
-
   &__info {
     padding: 6.5% 6% 6% 6.5%;
     background-color: hsl(244, 38%, 16%);
 
-    width: 39.5vw;
+    @media screen and (max-width: $max-mobile-width) {
+      padding-bottom: 0;
+      width: 100%;
+      height: 100%;
+    }
+    @media screen and (min-width: calc(#{$max-mobile-width} + 1px)) and (max-width: calc(#{$max-desktop-width} - 1px)) {
+      width: 39.5vw;
+    }
     @media screen and (min-width: $max-desktop-width) {
       width: 570px;
     }
   }
 
   &__img {
-    background: linear-gradient(#6a328dba), url("../images/image-header-desktop.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    filter: contrast(140%);
-
-    width: 37.5vw;
+    @media screen and (max-width: $max-mobile-width) {
+      width: 328px;
+      height: 353px;
+      background: linear-gradient($img-filter-color), url("../images/image-header-mobile.jpg");
+      background-repeat: no-repeat;
+      background-size: 100%;
+      filter: contrast($img-filter-contrast);
+    }
+    @media screen and (min-width: calc(#{$max-mobile-width} + 1px)) and (max-width: calc(#{$max-desktop-width} - 1px)) {
+      width: 37.5vw;
+      background: linear-gradient($img-filter-color), url("../images/image-header-desktop.jpg");
+      background-repeat: no-repeat;
+      background-size: 100%;
+      filter: contrast($img-filter-contrast);
+    }
     @media screen and (min-width: $max-desktop-width) {
       width: 540px;
+      background: linear-gradient($img-filter-color), url("../images/image-header-desktop.jpg");
+      background-repeat: no-repeat;
+      background-size: 100%;
+      filter: contrast($img-filter-contrast);
     }
   }
 
@@ -72,7 +99,15 @@ body {
     font-family: $main-text-font-family;
     color: $title-text-color;
 
-    font-size: 2.5vw;
+    @media screen and (max-width: $max-mobile-width) {
+      text-align: center;
+      font-size: 1.85em;
+      margin: 0.7em 0 0.25em 0;
+      line-height: 1.15em;
+    }
+    @media screen and (min-width: calc(#{$max-mobile-width} + 1px)) and (max-width: calc(#{$max-desktop-width} - 1px)) {
+      font-size: 2.5vw;
+    }
     @media screen and (min-width: $max-desktop-width) {
       font-size: 2.4em;
     }
@@ -86,43 +121,67 @@ body {
     color: $main-text-color;
     font-weight: $font-weight-regular;
     width: 90%;
+    font-size: 1em;
+    line-height: 1.65em;
 
-    margin: 1.6vw 0 5vw 0;
-    font-size: 1.04vw;
-    line-height: 1.75vw;
+    @media screen and (max-width: $max-mobile-width) {
+      text-align: center;
+      margin: 1em 1em 1.85em 1em;
+      width: auto;
+    }
+    @media screen and (min-width: calc(#{$max-mobile-width} + 1px)) and (max-width: calc(#{$max-desktop-width} - 1px)) {
+      margin: 1.6vw 0 5vw 0;
+      font-size: 1.04vw;
+      line-height: 1.75vw;
+    }
     @media screen and (min-width: $max-desktop-width) {
-      margin: 1.6em 0 5em 0;
-      font-size: 1em;
-      line-height: 1.65em;
+      margin: 1.6em 0 4.9em 0;
     }
   }
 
   &__stats-list {
     list-style-type: none;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-direction: row;
+    @media screen and (max-width: $max-mobile-width) {
+      flex-direction: column;
+    }
   }
 
   &__stat {
+    width: 33.3%;
+
+    @media screen and (max-width: $max-mobile-width) {
+      width: auto;
+      text-align: center;
+      margin: 0.95em 0;
+    }
+
     &-value {
       color: $title-text-color;
+      font-size: 1.6em;
 
-      font-size: 1.6vw;
-      margin-bottom: 0.6vw;
+      @media screen and (max-width: $max-mobile-width) {
+        margin-bottom: 0.25em;
+      }
+      @media screen and (min-width: calc(#{$max-mobile-width} + 1px)) and (max-width: calc(#{$max-desktop-width} - 1px)) {
+        font-size: 1.6vw;
+        margin-bottom: 0.6vw;
+      }
       @media screen and (min-width: $max-desktop-width) {
-        font-size: 1.6em;
         margin-bottom: 0.2em;
       }
     }
 
     &-name {
       color: $main-text-color;
+      font-family: $title-text-font-family;
       font-weight: $font-weight-regular;
       text-transform: uppercase;
 
-      font-size: 0.92vw;
-      @media screen and (min-width: $max-desktop-width) {
-        font-size: 0.92em;
+      font-size: 0.85em;
+      @media screen and (min-width: calc(#{$max-mobile-width} + 1px)) and (max-width: calc(#{$max-desktop-width} - 1px)) {
+        font-size: 0.92vw;
       }
     }
   }
