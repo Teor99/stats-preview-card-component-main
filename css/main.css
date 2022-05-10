@@ -1,7 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
-body {
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -15,27 +20,17 @@ body {
   background-color: #0a0c1a;
 }
 
-.stats-card,
-.stats-card * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 .stats-card {
-  max-width: 1180px;
+  max-width: 1110px;
   max-height: 446px;
+  width: 77vw;
+  height: 31vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 100%;
-          flex: 0 0 100%;
-  -webkit-box-pack: stretch;
-      -ms-flex-pack: stretch;
-          justify-content: stretch;
-  margin: 3%;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   overflow: hidden;
   border-radius: 10px;
   font-family: "Inter", sans-serif;
@@ -48,13 +43,8 @@ body {
   background-color: #1b1938;
 }
 
-.stats-card__img {
-  width: 100%;
-  height: 100%;
-}
-
 .stats-card__title {
-  font-size: 240%;
+  font-size: 2.5vw;
   font-family: "Inter", sans-serif;
   color: white;
 }
@@ -64,31 +54,30 @@ body {
 }
 
 .stats-card__text {
-  margin: 1.6em 0 5em 0;
+  margin: 1.6vw 0 5vw 0;
+  font-size: 1.04vw;
   color: #b5b3cc;
   font-weight: 400;
-  line-height: 1.65em;
+  line-height: 1.75vw;
   width: 90%;
 }
 
 .stats-card__stats-list {
   list-style-type: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.stats-card__stat {
-  width: 33%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
 }
 
 .stats-card__stat-value {
   color: white;
-  margin-bottom: 0.2em;
+  font-size: 1.6vw;
+  margin-bottom: 0.6vw;
 }
 
 .stats-card__stat-name {
-  font-size: 0.92em;
+  font-size: 0.92vw;
   color: #b5b3cc;
   text-transform: uppercase;
   font-weight: 400;
