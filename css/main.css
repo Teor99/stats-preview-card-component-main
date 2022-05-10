@@ -21,13 +21,13 @@ body {
 }
 
 .stats-card {
-  max-width: 1110px;
-  max-height: 446px;
-  width: 77vw;
-  height: 31vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
@@ -36,18 +36,36 @@ body {
   font-family: "Inter", sans-serif;
   font-size: 15px;
   font-weight: 400;
+  width: 77vw;
+  height: 31vw;
+}
+
+@media screen and (min-width: 1440px) {
+  .stats-card {
+    width: 1110px;
+    height: 446px;
+  }
 }
 
 .stats-card__info {
   padding: 6.5% 6% 6% 6.5%;
   background-color: #1b1938;
+  width: 39.5vw;
 }
 
-.stats-card__img-container {
-  position: relative;
+@media screen and (min-width: 1440px) {
+  .stats-card__info {
+    width: 570px;
+  }
 }
 
 .stats-card__img {
+  background: -webkit-gradient(linear, left top, left bottom, from(#6a328dba)), url("../images/image-header-desktop.jpg");
+  background: linear-gradient(#6a328dba), url("../images/image-header-desktop.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-filter: contrast(140%);
+          filter: contrast(140%);
   width: 37.5vw;
 }
 
@@ -55,16 +73,6 @@ body {
   .stats-card__img {
     width: 540px;
   }
-}
-
-.stats-card__img-filter {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: -webkit-gradient(linear, left top, left bottom, from(#54008891));
-  background: linear-gradient(#54008891);
 }
 
 .stats-card__title {

@@ -11,7 +11,8 @@ $main-text-color: hsl(245, 20%, 75%);
 $accent-text-color: hsl(277, 66%, 61%);
 $img-filter-color: #54008891;
 
-$bp-1440: 1440px;
+$max-desktop-width: 1440px;
+$max-mobile-width: 480px;
 
 * {
   box-sizing: border-box;
@@ -28,11 +29,8 @@ body {
 }
 
 .stats-card {
-  max-width: 1110px;
-  max-height: 446px;
-  width: 77vw;
-  height: 31vw;
   display: flex;
+  flex-direction: row-reverse;
   justify-content: flex-end;
   overflow: hidden;
   border-radius: 10px;
@@ -40,40 +38,34 @@ body {
   font-size: $font-size;
   font-weight: $font-weight-regular;
 
+  width: 77vw;
+  height: 31vw;
+  @media screen and (min-width: $max-desktop-width) {
+    width: 1110px;
+    height: 446px;
+  }
+
+
   &__info {
     padding: 6.5% 6% 6% 6.5%;
     background-color: hsl(244, 38%, 16%);
-  }
 
-  &__img-container {
-    position: relative;
+    width: 39.5vw;
+    @media screen and (min-width: $max-desktop-width) {
+      width: 570px;
+    }
   }
 
   &__img {
-    // background: linear-gradient(#6a328dba), url("../images/image-header-desktop.jpg");
-    // background-size: cover;
-    // background-repeat: no-repeat;
-    // filter: contrast(150%);
-    // height: 100%;
+    background: linear-gradient(#6a328dba), url("../images/image-header-desktop.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: contrast(140%);
 
-    // width: 37.5vw;
     width: 37.5vw;
-    @media screen and (min-width: $bp-1440) {
+    @media screen and (min-width: $max-desktop-width) {
       width: 540px;
     }
-
-    // background-color: #6a328dba;
-    // background: linear-gradient(#6a328dba);
-    // opacity: 50%;
-  }
-
-  &__img-filter {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient($img-filter-color);
   }
 
   &__title {
@@ -81,7 +73,7 @@ body {
     color: $title-text-color;
 
     font-size: 2.5vw;
-    @media screen and (min-width: $bp-1440) {
+    @media screen and (min-width: $max-desktop-width) {
       font-size: 2.4em;
     }
   }
@@ -98,7 +90,7 @@ body {
     margin: 1.6vw 0 5vw 0;
     font-size: 1.04vw;
     line-height: 1.75vw;
-    @media screen and (min-width: $bp-1440) {
+    @media screen and (min-width: $max-desktop-width) {
       margin: 1.6em 0 5em 0;
       font-size: 1em;
       line-height: 1.65em;
@@ -117,7 +109,7 @@ body {
 
       font-size: 1.6vw;
       margin-bottom: 0.6vw;
-      @media screen and (min-width: $bp-1440) {
+      @media screen and (min-width: $max-desktop-width) {
         font-size: 1.6em;
         margin-bottom: 0.2em;
       }
@@ -129,7 +121,7 @@ body {
       text-transform: uppercase;
 
       font-size: 0.92vw;
-      @media screen and (min-width: $bp-1440) {
+      @media screen and (min-width: $max-desktop-width) {
         font-size: 0.92em;
       }
     }
