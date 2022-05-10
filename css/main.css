@@ -43,10 +43,33 @@ body {
   background-color: #1b1938;
 }
 
+.stats-card__img-filter {
+  background: -webkit-gradient(linear, left top, left bottom, from(#6a328dba)), url("../images/image-header-desktop.jpg");
+  background: linear-gradient(#6a328dba), url("../images/image-header-desktop.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-filter: contrast(160%);
+          filter: contrast(160%);
+  height: 100%;
+  width: 37.5vw;
+}
+
+@media screen and (min-width: 1440px) {
+  .stats-card__img-filter {
+    width: 540px;
+  }
+}
+
 .stats-card__title {
-  font-size: 2.5vw;
   font-family: "Inter", sans-serif;
   color: white;
+  font-size: 2.5vw;
+}
+
+@media screen and (min-width: 1440px) {
+  .stats-card__title {
+    font-size: 2.4em;
+  }
 }
 
 .stats-card__accent {
@@ -54,12 +77,20 @@ body {
 }
 
 .stats-card__text {
-  margin: 1.6vw 0 5vw 0;
-  font-size: 1.04vw;
   color: #b5b3cc;
   font-weight: 400;
-  line-height: 1.75vw;
   width: 90%;
+  margin: 1.6vw 0 5vw 0;
+  font-size: 1.04vw;
+  line-height: 1.75vw;
+}
+
+@media screen and (min-width: 1440px) {
+  .stats-card__text {
+    margin: 1.6em 0 5em 0;
+    font-size: 1em;
+    line-height: 1.65em;
+  }
 }
 
 .stats-card__stats-list {
@@ -76,9 +107,22 @@ body {
   margin-bottom: 0.6vw;
 }
 
+@media screen and (min-width: 1440px) {
+  .stats-card__stat-value {
+    font-size: 1.6em;
+    margin-bottom: 0.2em;
+  }
+}
+
 .stats-card__stat-name {
-  font-size: 0.92vw;
   color: #b5b3cc;
-  text-transform: uppercase;
   font-weight: 400;
+  text-transform: uppercase;
+  font-size: 0.92vw;
+}
+
+@media screen and (min-width: 1440px) {
+  .stats-card__stat-name {
+    font-size: 0.92em;
+  }
 }
