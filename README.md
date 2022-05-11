@@ -8,9 +8,9 @@
 
 ## Links
 
-- [Frontend Mentor coding challenge](#)
-- [My challenge](#)
-- [My solution](#)
+- [Frontend Mentor coding challenge](https://www.frontendmentor.io/challenges/stats-preview-card-component-8JqbgoU62)
+- [My challenge](https://www.frontendmentor.io/challenges/stats-preview-card-component-8JqbgoU62/hub/stats-preview-card-component-HJLVuNY8c)
+- [My solution](https://www.frontendmentor.io/solutions/stats-preview-card-component-HJLVuNY8c)
 - [style-guide.md](./style-guide.md)
 
 ## Design
